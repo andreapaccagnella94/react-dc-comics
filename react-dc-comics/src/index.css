@@ -8,6 +8,19 @@ body {
   background-color: whitesmoke;
 }
 
+.container {
+  width: 80%;
+  max-width: 1176px;
+  margin: auto
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem
+}
+
+
 img {
   max-width: 100%;
 }
@@ -38,22 +51,6 @@ header {
   }
 }
 
-.container {
-  width: 80%;
-  max-width: 1176px;
-  margin: auto
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -1rem
-}
-
-.col {
-  width: calc(100% / 5);
-  padding: 1rem
-}
 
 main {
   background-color: black;
@@ -65,6 +62,11 @@ main {
 
   section {
     background-color: blue;
+
+    .col {
+      width: calc(100% / 5);
+      padding: 1rem
+    }
 
     .card {
       padding: 1rem;
@@ -83,8 +85,13 @@ footer {
   background-image: url('./assets/img/footer-bg.jpg');
   min-height: 50vh;
 
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .col {
-    width: calc(100% / 3);
+    width: calc(100% / 2);
     padding: 1rem
   }
 

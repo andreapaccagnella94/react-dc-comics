@@ -1,3 +1,4 @@
+import footerLogo from "../assets/img/dc-logo-bg.png"
 export default function AppFooter() {
 
     const footer_menu = [
@@ -71,26 +72,29 @@ export default function AppFooter() {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <p>ci andrebbe il logo</p>
+
+                        {footer_menu.map(menu => (
+
+                            <div className="col" key={menu.id}>
+                                <h3>{menu.title}</h3>
+                                <ul>
+                                    {menu.list.map(list_item => (
+
+                                        <li key={list_item.id}>
+                                            <a href={list_item.link}>{list_item.text}</a>
+                                        </li>
+                                    ))
+
+                                    }
+
+                                </ul>
+                            </div>
+
+                        ))}
                     </div>
-                    {footer_menu.map(menu => (
-
-                        <div className="col" key={menu.id}>
-                            <h3>{menu.title}</h3>
-                            <ul>
-                                {menu.list.map(list_item => (
-
-                                    <li key={list_item.id}>
-                                        <a href={list_item.link}>{list_item.text}</a>
-                                    </li>
-                                ))
-
-                                }
-
-                            </ul>
-                        </div>
-
-                    ))}
+                    <div className="col">
+                        <img src={footerLogo} alt="" />
+                    </div>
 
                     {/* <div className="col">
                         <h3>Pastificio</h3>
