@@ -15,7 +15,12 @@ img {
 header {
   text-align: center;
   background-color: white;
-  padding-bottom: 2rem;
+  padding: 2rem 0rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 
   nav {
     margin-top: 2rem;
@@ -57,9 +62,36 @@ main {
   h1 {
     color: white;
   }
+
+  section {
+    background-color: blue;
+
+    .card {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h3 {
+      color: white;
+    }
+  }
 }
 
 footer {
   background-image: url('./assets/img/footer-bg.jpg');
-  min-height: 100vh;
+  min-height: 50vh;
+
+  .col {
+    width: calc(100% / 3);
+    padding: 1rem
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+  }
+
 }

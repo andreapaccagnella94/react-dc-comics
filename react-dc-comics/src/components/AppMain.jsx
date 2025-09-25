@@ -1,6 +1,19 @@
+import ProductCard from "./ProductCard"
+import img_1 from "../assets/img/buy-comics-digital-comics.png"
+
+
+
 export default function AppMain() {
 
     const title = '--> Content goes here <--'
+
+    const cards = [
+        {
+            id: 1,
+            text: 'DIGITAL COMICS',
+            img: img_1
+        }
+    ]
 
     return (
         <main>
@@ -9,34 +22,24 @@ export default function AppMain() {
                 {/* <h1 style={{ textAlign: 'center' }}>{title}</h1> */}
             </div>
 
-            {/* <section>
+            <section>
 
                 <div className="container">
                     <div className="row">
+                        {cards.map(card => (
+                            <div className="col" key={card.id} >
+                                <ProductCard name={card.text} image={card.img} />
+                            </div>
 
-                        <div className="col">
-                            <ProductCard name='N.4 Spaghetto Quadrato Bucato' image={'https://www.lamolisana.it/wp-content/uploads/2021/04/1-spaghetto-quadrato.jpg'} />
-                        </div>
-                        <div className="col">
-                            <ProductCard name={'N.5 Fettuccine'} image={'https://www.lamolisana.it/wp-content/uploads/2021/04/5-fettuccine.jpg'} />
-                        </div>
-                        <div className="col">
-                            <ProductCard name={'N.6 Linguine'} image={'https://www.lamolisana.it/wp-content/uploads/2021/04/6-linguine.jpg'} />
-                        </div>
-                        <div className="col">
-                            <ProductCard name={'N.4 Spaghetto Quadrato Bucato'} image={'https://www.lamolisana.it/wp-content/uploads/2021/04/1-spaghetto-quadrato.jpg'} />
-                        </div>
-                        <div className="col">
-                            <ProductCard name={'N.5 Fettuccine'} image={'https://www.lamolisana.it/wp-content/uploads/2021/04/5-fettuccine.jpg'} />
-                        </div>
-                        <div className="col">
-                            <ProductCard name={'N.6 Linguine'} image={'https://www.lamolisana.it/wp-content/uploads/2021/04/6-linguine.jpg'} />
-                        </div>
+                        ))
+                        }
+
+
 
                     </div>
                 </div>
 
-            </section> */}
+            </section>
 
 
 

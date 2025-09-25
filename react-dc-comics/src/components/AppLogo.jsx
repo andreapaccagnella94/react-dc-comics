@@ -4,7 +4,7 @@ export default function AppLogo() {
 
     return (
         <>
-            <img src="{logoDC}" alt="" />
+            <img src={logoDC} alt="" />
         </>
     )
 }
