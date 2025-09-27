@@ -4,7 +4,7 @@ export default function AppFooter() {
     const footer_menu = [
         {
             id: 1,
-            title: 'Pasticifio',
+            title: 'DC COMICS',
             list: [
                 {
                     id: 1,
@@ -28,6 +28,16 @@ export default function AppFooter() {
                 },
                 {
                     id: 5,
+                    text: 'Il pastificio',
+                    link: '#'
+                },
+                {
+                    id: 6,
+                    text: 'Il pastificio',
+                    link: '#'
+                },
+                {
+                    id: 7,
                     text: 'Il pastificio',
                     link: '#'
                 }
@@ -35,7 +45,23 @@ export default function AppFooter() {
         },
         {
             id: 2,
-            title: 'Products',
+            title: 'SHOP',
+            list: [
+                {
+                    id: 1,
+                    text: 'Il pastificio',
+                    link: '#'
+                },
+                {
+                    id: 2,
+                    text: 'Il pastificio',
+                    link: '#'
+                }
+            ]
+        },
+        {
+            id: 3,
+            title: 'DC',
             list: [
                 {
                     id: 1,
@@ -61,39 +87,91 @@ export default function AppFooter() {
                     id: 5,
                     text: 'Il pastificio',
                     link: '#'
+                },
+                {
+                    id: 6,
+                    text: 'Il pastificio',
+                    link: '#'
+                },
+                {
+                    id: 7,
+                    text: 'Il pastificio',
+                    link: '#'
+                },
+                {
+                    id: 8,
+                    text: 'Il pastificio',
+                    link: '#'
+                },
+                {
+                    id: 9,
+                    text: 'Il pastificio',
+                    link: '#'
+                },
+            ]
+
+        },
+        {
+            id: 4,
+            title: 'SITES',
+            list: [
+                {
+                    id: 1,
+                    text: 'Il pastificio',
+                    link: '#'
+                },
+                {
+                    id: 2,
+                    text: 'Il pastificio',
+                    link: '#'
+                },
+                {
+                    id: 3,
+                    text: 'Il pastificio',
+                    link: '#'
+                },
+                {
+                    id: 4,
+                    text: 'Il pastificio',
+                    link: '#'
                 }
+
             ]
         }
-
     ]
     return (
         <footer>
 
             <div className="container">
-                <div className="row">
-                    <div className="col">
+                <div className="links">
 
-                        {footer_menu.map(menu => (
+                    <div className="row">
+                        <div className="col">
+                            <div className="row-rev">
 
-                            <div className="col" key={menu.id}>
-                                <h3>{menu.title}</h3>
-                                <ul>
-                                    {menu.list.map(list_item => (
+                                {footer_menu.map(menu => (
 
-                                        <li key={list_item.id}>
-                                            <a href={list_item.link}>{list_item.text}</a>
-                                        </li>
-                                    ))
+                                    <div className="col" key={menu.id}>
+                                        <h3>{menu.title}</h3>
+                                        <ul>
+                                            {menu.list.map(list_item => (
 
-                                    }
+                                                <li key={list_item.id}>
+                                                    <a href={list_item.link}>{list_item.text}</a>
+                                                </li>
+                                            ))
 
-                                </ul>
+                                            }
+
+                                        </ul>
+                                    </div>
+
+                                ))}
                             </div>
-
-                        ))}
-                    </div>
-                    <div className="col">
-                        <img src={footerLogo} alt="" />
+                        </div>
+                        <div className="col">
+                            <img src={footerLogo} alt="" />
+                        </div>
                     </div>
 
                     {/* <div className="col">
@@ -136,6 +214,9 @@ export default function AppFooter() {
                             </li>
                         </ul>
                     </div> */}
+                </div>
+                <div className="sing-up">
+
                 </div>
             </div>
 

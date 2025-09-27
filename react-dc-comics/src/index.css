@@ -42,11 +42,12 @@ header {
     a {
       text-decoration: none;
       color: black;
-      padding: 1rem;
+      font-weight: bold;
+      padding: 1rem 0.5rem;
 
       &.active {
-        background-color: paleturquoise;
-
+        color: blue;
+        border-bottom: 0.2rem solid blue;
       }
     }
   }
@@ -92,14 +93,37 @@ footer {
   }
 
   .col {
-    width: calc(100% / 2);
-    padding: 1rem
+    /*width: calc(100% / 2);*/
+    padding: 1rem;
+
+
+  }
+
+  .row-rev {
+    max-height: 25rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1.5rem;
+  }
+
+  h3 {
+    color: white;
   }
 
   a {
     text-decoration: none;
     color: white;
     padding: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
   }
 
 }
