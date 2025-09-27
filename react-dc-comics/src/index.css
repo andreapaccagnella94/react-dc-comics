@@ -95,8 +95,6 @@ footer {
   .col {
     /*width: calc(100% / 2);*/
     padding: 1rem;
-
-
   }
 
   .row-rev {
@@ -124,6 +122,27 @@ footer {
     padding: 0;
     margin: 0;
 
+  }
+
+  .sing-up {
+    min-height: 5rem;
+    position: sticky;
+    bottom: 0;
+    background-color: rgb(44, 44, 44);
+
+    .follow {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        color: blue;
+
+        ul {
+          display: flex;
+          list-style-type: none;
+        }
+      }
+    }
   }
 
 }
