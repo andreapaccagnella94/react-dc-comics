@@ -1,145 +1,8 @@
 import footerLogo from "../assets/img/dc-logo-bg.png"
 import fbLogo from "../assets/img/footer-facebook.png"
-export default function AppFooter() {
+export default function AppFooter({ menu }) {
 
-    const footer_menu = [
-        {
-            id: 1,
-            title: 'DC COMICS',
-            list: [
-                {
-                    id: 1,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 2,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 3,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 4,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 5,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 6,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 7,
-                    text: 'Il pastificio',
-                    link: '#'
-                }
-            ]
-        },
-        {
-            id: 2,
-            title: 'SHOP',
-            list: [
-                {
-                    id: 1,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 2,
-                    text: 'Il pastificio',
-                    link: '#'
-                }
-            ]
-        },
-        {
-            id: 3,
-            title: 'DC',
-            list: [
-                {
-                    id: 1,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 2,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 3,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 4,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 5,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 6,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 7,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 8,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 9,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-            ]
 
-        },
-        {
-            id: 4,
-            title: 'SITES',
-            list: [
-                {
-                    id: 1,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 2,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 3,
-                    text: 'Il pastificio',
-                    link: '#'
-                },
-                {
-                    id: 4,
-                    text: 'Il pastificio',
-                    link: '#'
-                }
-
-            ]
-        }
-    ]
 
     const followUs_menu = [
         {
@@ -195,7 +58,7 @@ export default function AppFooter() {
                         <div className="col">
                             <div className="row-rev">
 
-                                {footer_menu.map(menu => (
+                                {menu.map(menu => (
 
                                     <div className="col" key={menu.id}>
                                         <h3>{menu.title}</h3>
