@@ -2,6 +2,7 @@ const footer_menu = [
     {
         id: 1,
         title: 'DC COMICS',
+        same_column: false,
         list: [
             {
                 id: 1,
@@ -43,6 +44,7 @@ const footer_menu = [
     {
         id: 2,
         title: 'SHOP',
+        same_column: true,
         list: [
             {
                 id: 1,
@@ -59,6 +61,7 @@ const footer_menu = [
     {
         id: 3,
         title: 'DC',
+        same_column: false,
         list: [
             {
                 id: 1,
@@ -106,11 +109,11 @@ const footer_menu = [
                 link: '#'
             },
         ]
-
     },
     {
         id: 4,
         title: 'SITES',
+        same_column: false,
         list: [
             {
                 id: 1,

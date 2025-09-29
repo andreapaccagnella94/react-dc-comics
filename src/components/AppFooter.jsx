@@ -56,7 +56,48 @@ export default function AppFooter({ menu }) {
 
                     <div className="row">
                         <div className="col">
-                            <div className="row-rev">
+                            <div className="row">
+                                {menu.map(menu => (
+
+                                    <div key={menu.id}>
+                                        {menu.same_column ?
+                                            <div >
+                                                <h3>{menu.title}</h3>
+                                                <ul>
+                                                    {menu.list.map(list_item => (
+
+                                                        <li key={list_item.id}>
+                                                            <a href={list_item.link}>{list_item.text}</a>
+                                                        </li>
+                                                    ))
+
+                                                    }
+
+                                                </ul>
+
+                                            </div>
+                                            :
+                                            <div className="col-3" key={menu.id}>
+                                                <h3>{menu.title}</h3>
+                                                <ul>
+                                                    {menu.list.map(list_item => (
+
+                                                        <li key={list_item.id}>
+                                                            <a href={list_item.link}>{list_item.text}</a>
+                                                        </li>
+                                                    ))
+
+                                                    }
+
+                                                </ul>
+
+                                            </div>
+                                        }
+                                    </div>
+
+                                ))}
+                            </div>
+                            {/*   <div className="row-rev">
 
                                 {menu.map(menu => (
 
@@ -73,10 +114,11 @@ export default function AppFooter({ menu }) {
                                             }
 
                                         </ul>
+
                                     </div>
 
                                 ))}
-                            </div>
+                            </div> */}
                         </div>
                         <div className="col">
                             <img src={footerLogo} alt="" />
