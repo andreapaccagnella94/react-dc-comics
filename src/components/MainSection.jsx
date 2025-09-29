@@ -7,11 +7,7 @@ export default function MainSection({ cards }) {
             <div className="container">
                 <div className="row">
                     {cards.map(card => (
-                        <div className="col" key={card.id} >
-                            console.log(cards);
-
-                            {/* <ProductCard cards={cards} /> */}
-                        </div>
+                        <ProductCard card={card} key={card.id} />
                     ))
                     }
                 </div>
